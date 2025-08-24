@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Eye, Brain, Activity } from 'lucide-react';
+import { ExternalLink, Github, Eye, Brain, Activity, Hand, Sprout } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ProjectsSection = () => {
@@ -17,8 +17,8 @@ const ProjectsSection = () => {
       technologies: ["Express.js", "FastAPI", "MongoDB", "Google Gemini", "OpenCV", "YOLO", "JavaScript", "Python"],
       icon: <Brain className="text-primary" size={32} />,
       color: "from-primary to-cyan-400",
-      github: "https://github.com/pratyushojha04/metahire",
-      demo: "https://metahire-demo.com"
+      github: "https://github.com/pratyushojha04/metaHireFastAPI",
+      demo: "https://metahire.vercel.app/"
     },
     {
       title: "FITTAB",
@@ -35,7 +35,41 @@ const ProjectsSection = () => {
       icon: <Activity className="text-accent" size={32} />,
       color: "from-accent to-purple-400",
       github: "https://github.com/pratyushojha04/fittab",
-      demo: "https://fittab-demo.com"
+      demo: "https://fittab-2.onrender.com/"
+    },
+    {
+      title: "Sign Language Detector",
+      subtitle: "Hand Gesture to Text for Blind Assistance",
+      description: "Developed a CNN-based model that converts hand gestures into text, enabling visually impaired individuals to interact with computers using sign language.",
+      features: [
+        "Trained CNN model for hand gesture recognition",
+        "Real-time gesture capture via webcam",
+        "Gesture-to-text conversion for accessibility",
+        "Custom dataset creation for Indian Sign Language",
+        "Lightweight deployment with optimized inference"
+      ],
+      technologies: ["CNN", "TensorFlow", "Keras", "OpenCV", "Python"],
+      icon: <Hand className="text-green-500" size={32} />,
+      color: "from-green-400 to-emerald-500",
+      github: "https://github.com/pratyushojha04/sign-language-detector", // Replace if different
+      demo: ""
+    },
+    {
+      title: "KhetiBuddy",
+      subtitle: "AI & ML Enabled Smart Contract Farming Platform",
+      description: "An AI-powered platform to assist farmers with crop selection and price forecasting. Worked on ML models and backend integration for real-world agricultural insights.",
+      features: [
+        "Model to predict the best crop to grow based on soil quality",
+        "24-month price prediction model for crops across all Indian states",
+        "Backend system with APIs for integration",
+        "Interactive farmer dashboard with insights",
+        "Optimized ML pipelines for large datasets"
+      ],
+      technologies: ["Machine Learning", "Python", "Scikit-learn", "Pandas", "Flask", "FastAPI"],
+      icon: <Sprout className="text-lime-500" size={32} />,
+      color: "from-lime-400 to-teal-500",
+      github: "https://github.com/pratyushojha04/khetibuddy", // Replace if different
+      demo: ""
     }
   ];
 
@@ -102,22 +136,26 @@ const ProjectsSection = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github className="mr-2" size={20} />
-                  View Code
-                </Button>
+                {project.github && (
+                  <Button 
+                    className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    <Github className="mr-2" size={20} />
+                    View Code
+                  </Button>
+                )}
                 
-                <Button 
-                  variant="outline"
-                  className="flex-1 glass-card border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open(project.demo, '_blank')}
-                >
-                  <ExternalLink className="mr-2" size={20} />
-                  Live Demo
-                </Button>
+                {project.demo && (
+                  <Button 
+                    variant="outline"
+                    className="flex-1 glass-card border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                    onClick={() => window.open(project.demo, '_blank')}
+                  >
+                    <ExternalLink className="mr-2" size={20} />
+                    Live Demo
+                  </Button>
+                )}
               </div>
             </div>
           ))}
