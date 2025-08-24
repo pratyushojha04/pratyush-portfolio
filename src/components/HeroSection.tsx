@@ -6,6 +6,13 @@ const HeroSection = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleResumeDownload = () => {
+    window.open(
+      "https://drive.google.com/file/d/193pbZLBLJG2dvKFixIxgk_gg_tN6EkuV/view?usp=sharing",
+      "_blank"
+    );
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -47,6 +54,7 @@ const HeroSection = () => {
             
             <Button 
               variant="outline"
+              onClick={handleResumeDownload}
               className="glass-card border-primary/50 text-primary hover:bg-primary/10 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               <Download className="mr-2" size={20} />
