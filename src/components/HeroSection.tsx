@@ -48,9 +48,16 @@ const HeroSection = () => {
             <Button 
               variant="outline"
               className="glass-card border-primary/50 text-primary hover:bg-primary/10 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              asChild
             >
-              <Download className="mr-2" size={20} />
-              Download Resume
+              <a 
+                href="https://drive.google.com/uc?export=download&id=193pbZLBLJG2dvKFixIxgk_gg_tN6EkuV" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2" size={20} />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
