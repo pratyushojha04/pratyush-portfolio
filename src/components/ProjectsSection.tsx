@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         "YOLO-based phone detection for exam integrity",
         "Real-time interview scoring and feedback system"
       ],
-      technologies: ["Express.js", "FastAPI", "MongoDB", "Google Gemini", "OpenCV", "YOLO", "JavaScript", "Python"],
+      technologies: ["Express.js", "FastAPI", "MongoDB", "Google Gemini", "OpenCV", "YOLO", "JavaScript", "Python","Hugging Face","Transformer","Gen AI"],
       icon: <Brain className="text-primary" size={32} />,
       color: "from-primary to-cyan-400",
       github: "https://github.com/pratyushojha04/metaHireFastAPI",
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
         "Custom dataset creation for Indian Sign Language",
         "Lightweight deployment with optimized inference"
       ],
-      technologies: ["CNN", "TensorFlow", "Keras", "OpenCV", "Python"],
+      technologies: ["CNN", "TensorFlow", "Keras", "OpenCV", "Python","Tkinter"],
       icon: <Hand className="text-green-500" size={32} />,
       color: "from-green-400 to-emerald-500",
       github: "https://github.com/pratyushojha04/sign-language-detector", // Replace if different
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
         "Interactive farmer dashboard with insights",
         "Optimized ML pipelines for large datasets"
       ],
-      technologies: ["Machine Learning", "Python", "Scikit-learn", "Pandas", "Flask", "FastAPI"],
+      technologies: ["Machine Learning", "Python", "Scikit-learn", "Pandas", "MongoDB", "Express JS","flask"],
       icon: <Sprout className="text-lime-500" size={32} />,
       color: "from-lime-400 to-teal-500",
       github: "https://github.com/pratyushojha04/khetibuddy", // Replace if different
