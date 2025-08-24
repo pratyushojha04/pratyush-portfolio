@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -62,6 +65,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			animation: {
+				'fade-in': 'fadeIn 0.6s ease-out',
+				'slide-up': 'slideUp 0.6s ease-out',
+				'scale-in': 'scaleIn 0.4s ease-out',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+			},
+			keyframes: {
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				slideUp: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				scaleIn: {
+					'0%': { opacity: '0', transform: 'scale(0.9)' },
+					'100%': { opacity: '1', transform: 'scale(1)' },
+				},
+				glow: {
+					'0%': { textShadow: '0 0 20px hsl(180 100% 50% / 0.5)' },
+					'100%': { textShadow: '0 0 30px hsl(180 100% 50% / 0.8)' },
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
